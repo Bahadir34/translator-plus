@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+/* Smooth transitions */
+* {
+  transition: color 0.5s ease, background-color 0.5s ease,
+    border-color 0.5s ease;
+}
+
+/* Focus styles */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:ring-offset-2 focus:ring-offset-zinc-900;
+}
+
+@layer base {
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .textarea {
+    @apply w-full min-h-[200px] lg:min-h-[300px] text-zinc-900 lg:text-lg rounded-xl p-4 bg-zinc-100 border-2 border-zinc-200 focus:border-blue-500 focus:outline-none resize-none disabled:opacity-100 disabled:bg-zinc-700/50 disabled:border-zinc-600 disabled:placeholder:text-zinc-400;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@media (max-width: 640px) {
+  .text-responsive {
+    font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+  }
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(63, 63, 70, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(82, 82, 91, 0.3);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #7badfd, #5b30c0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
