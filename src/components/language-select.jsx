@@ -138,7 +138,7 @@ const LanguageSelect = () => {
       <div className="flex items-center justify-center gap-3 lg:gap-10 flex-col lg:flex-row">
         {/* Kaynak Dil */}
         <div className="flex-1 w-full">
-          <label className="block text-sm text-zinc-300 mb-2">Kaynak Dil</label>
+          <label className="block text-sm text-zinc-300 mb-2">Source Language</label>
           <Select
             options={languages}
             className="text-sm text-black"
@@ -167,7 +167,7 @@ const LanguageSelect = () => {
 
         {/* Hedef Dil */}
         <div className="flex-1 w-full">
-          <label className="block text-sm text-zinc-300 mb-2">Hedef Dil</label>
+          <label className="block text-sm text-zinc-300 mb-2">Target Language</label>
           <Select
             options={languages}
             className="text-sm text-black"
